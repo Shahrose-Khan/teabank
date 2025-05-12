@@ -8,7 +8,7 @@ from app.services.invoice_service import (
     delete_invoice,
 )
 
-router = APIRouter()
+router = APIRouter(prefix="/invoices", tags=["Invoices"])
 
 @router.post("/")
 async def add_invoice(invoice: Invoice):
